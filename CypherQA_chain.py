@@ -31,7 +31,7 @@ Do not include any explanations or apologies in your responses.
 Examples:
 
 Find movies and years:
-MATCH (m:Movie) WHERE m.released > 1990 and m.title contains "Matrix" RETURN m LIMIT 5
+MATCH (m:Movie) WHERE m.released > 1990  RETURN m LIMIT 5
 
 Schema: {schema}
 Question: {question}
@@ -49,4 +49,4 @@ cypher_chain = GraphCypherQAChain.from_llm(
     verbose=True
 )
 
-cypher_chain.run("What year was the film Star Wars released?")
+cypher_chain.run("What year was the film The Matrix released?")
