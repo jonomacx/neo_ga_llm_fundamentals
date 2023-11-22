@@ -1,6 +1,6 @@
 from keys import openkey
-from langchain.chat_models.openai import ChatOpenAI
 from langchain.prompts.prompt import PromptTemplate
+from langchain.chat_models.openai import ChatOpenAI
 from langchain.chains import LLMChain
 from langchain.chains.conversation.memory import ConversationBufferMemory
 

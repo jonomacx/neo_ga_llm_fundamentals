@@ -1,17 +1,19 @@
 from keys import openkey
-from langchain.chat_models import ChatOpenAI
-from langchain.graphs import Neo4jGraph
-from langchain.chains import GraphCypherQAChain
 from langchain.prompts import PromptTemplate
+from langchain.chat_models import ChatOpenAI
+from langchain.chains import GraphCypherQAChain
+from langchain.graphs import Neo4jGraph
+
+
 
 llm = ChatOpenAI(
     openai_api_key=openkey
 )
 
 graph = Neo4jGraph(
-    url="bolt://34.200.220.50:7687",
+    url="bolt://54.174.85.163:7687",
     username="neo4j",
-    password="eights-defenses-strap",
+    password="rejections-gyroscopes-street",
 )
 
 CYPHER_GENERATION_TEMPLATE = """

@@ -1,9 +1,11 @@
 from keys import openkey
-from langchain.chains import RetrievalQA
+
 from langchain.chat_models.openai import ChatOpenAI
+from langchain.chains import RetrievalQA
+
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores.neo4j_vector import Neo4jVector
-from langchain.output_parsers.json import SimpleJsonOutputParser
+
 
 OPENAI_API_KEY = openkey
 
@@ -13,9 +15,9 @@ embedding_provider = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 
 movie_plot_vector = Neo4jVector.from_existing_index(
     embedding_provider,
-    url="bolt://52.90.176.41:7687",
+    url="bolt://54.174.85.163:7687",
     username="neo4j",
-    password="age-speeches-gross",
+    password="rejections-gyroscopes-street",
     index_name="moviePlots",
     embedding_node_property="embedding",
     text_node_property="plot",
